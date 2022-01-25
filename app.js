@@ -6,7 +6,10 @@ require('dotenv').config()
 // open connection to the database
 const Pool = require('pg').Pool
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: flase
+    }
     // user: 'postgres',
     // password: 'postgres',
     // host: 'localhost',
