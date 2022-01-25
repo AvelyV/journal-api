@@ -1,14 +1,17 @@
 // same as doing an import
 const express = require('express')
 const cors = require('cors')
+require('dotenv').config()
+
 // open connection to the database
 const Pool = require('pg').Pool
 const pool = new Pool({
-    user: 'postgres',
-    password: 'postgres',
-    host: 'localhost',
-    port: 5433,
-    database: 'journal'
+    connectionString: process.env.DATABASE_URL
+    // user: 'postgres',
+    // password: 'postgres',
+    // host: 'localhost',
+    // port: 5433,
+    // database: 'journal'
 })
 
 // initialises express

@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "dev": "npx nodemon"
+    "dev": "npx nodemon",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^14.3.0",
     "express": "^4.17.2",
     "pg": "^8.7.1"
   },
